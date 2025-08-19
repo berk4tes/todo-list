@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="todo.png">
+
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Görev yaz...">
+      <button id="addTaskBtn">Ekle</button>
+    </div>
+
+
+    <div class="filters">
+      <button data-filter="all" class="active">Tümü</button>
+      <button data-filter="active">Aktif</button>
+        <button data-filter="completed">Tamamlanan</button>
+
+      
+
+        <button id="clearCompleted" class="danger">Tamamlananları Sil</button>
+
+    </div>
+
+
+
+    <p id="counter" class="counter">Aktif görev yok</p>
+
+    
+
+    <p id="emptyMsg" class="empty">
+        Henüz görev eklenmedi <span id="rocket">🚀</span>
+    </p>
+
+
+    <ul id="taskList"></ul>
+
+    <details id="trashBox" class="trash-box">
+        <summary>Silinenler</summary>
+        <ul id="trashList"></ul>
+            <div class="trash-actions">
+                <button id="emptyTrash" class="danger">Çöpü Boşalt</button>
+            </div>
+    </details>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
